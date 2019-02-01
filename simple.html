@@ -12,13 +12,13 @@
 <body>
 <div id="simple">
     <div class="row">
-        <button v-on:click="recuperedPosts" style="display : block;">Activer</button>
-        <div v-for= "post in posts" class="d-none col-sm-3 d-sm-block">               
+        <button v-on:click="recuperedPosts" style="display : block;" class="col-12">Démarrer</button>
+        <div v-for= "post in posts" class="d-none col-12 col-sm-3 d-block">               
         <div class="col-sm-8 offset-sm-1">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 25rem;">
             <div class="card-body">
-              <h5 class="card-title">{{post.title.rendered}}</h5>
-              <a :href="post.link" class="btn btn-primary" style="background-color:red">Lien</a>
+              <h5 class="card-title" v-html="post.title.rendered"></h5>
+              <a :href="post.link" class="btn btn-primary" style="background-color:red">Lien de l'article</a>
             </div>
           </div></div>
     </div>
